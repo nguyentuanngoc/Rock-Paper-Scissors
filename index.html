@@ -1,0 +1,53 @@
+
+
+<script>
+    function computerPlay() {
+        let randomNumber = Math.random();
+        if (randomNumber < 1/3) return "rock";
+        else if (randomNumber < 2/3) return "paper";
+        else return "scissors";
+    }
+
+    let playerPoints = 0;
+
+    function playRound() {
+        let playerType = prompt("Type your selection");
+        let computerChoice = computerPlay();
+        let playerChoice = playerType.toLowerCase();
+        if (playerChoice != "rock" && playerChoice != "paper" && playerChoice != "scissors") {
+            console.log("That's not a selection. Type again.");
+            return playRound();
+        }
+        if (playerChoice == computerChoice) {
+            console.log("Draw! Play again!");
+            return playRound();
+        }
+        else {
+            if (playerChoice == "rock" && computerChoice == "paper") return console.log("You lost this round.");
+            else if (playerChoice == "rock" && computerChoice == "scissors") {
+                playerPoints += 1;
+                return console.log("You won this round.");
+            }
+            else if (playerChoice == "paper" && computerChoice == "rock") {
+                playerPoints += 1;
+                return console.log("You won this round.");
+            }
+            else if (playerChoice == "paper" && computerChoice == "scissors") return console.log("You lost this round.");
+            else if (playerChoice == "scissors" && computerChoice == "rock") return console.log("You lost this round.");
+            else {
+                playerPoints += 1;
+                return console.log("You won this round.");
+            }
+        }
+    }
+
+    function game() {
+        playRound();
+        playRound();
+        playRound();
+        playRound();
+        playRound();
+        if (playerPoints < 3) return "You lost!!";
+        else return "You won!!!";
+    }
+</script>
