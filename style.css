@@ -1,0 +1,51 @@
+body {
+    background-color: rgba(66, 28, 11, 0.726);
+}
+
+.select {
+    background-color: rgb(252, 244, 137);
+    color: rgb(5, 67, 95);
+    border: none;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.buttons {
+    position: absolute;
+    top: 30em;
+    left: 42em;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 50px;
+    grid-gap: 50px;
+}
+
+.start {
+    position: absolute;
+    top: 20rem;
+    left: 55rem;
+    font-size: 30px;
+    width: 8rem;
+    background-color: rgb(68, 17, 1);
+    border: none;
+    padding: 5px 5px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: cursive;
+}
+
+.round {
+    background-color: rgb(2, 16, 139);
+    position: absolute;
+    top: 20rem;
+    left: 50rem;
+    font-size: 30px;
+    width: 20rem;
+    height: 2.5rem;
+    border: none;
+    padding: 2px 2px;
+    text-align: center;
+    color: white;
+    font-family: fantasy;
+}
